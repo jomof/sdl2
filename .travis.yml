@@ -20,4 +20,5 @@ annoy:
   true: 
     tags: true
   file: 
-  - ./build/zips/cdep-manifest.yml
+  - ./SDL2-2.0.5/build/zips/cdep-manifest.yml
+  - ./SDL2-2.0.5.zip
