@@ -3,4 +3,4 @@ includes: [include]
 android:
   lib: libsdl.a
   ndk:
-    platforms: [10]
+    platforms: [21]
