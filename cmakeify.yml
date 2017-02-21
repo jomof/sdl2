@@ -3,7 +3,7 @@ includes: [include]
 android:
   lib: libsdl2.a
   flavors:
-    default: -DCMAKE_C_FLAGS=-DGL_GLEXT_PROTOTYPES -DANDROID=1 -DLINUX=0
+    default: -DCMAKE_C_FLAGS=-DGL_GLEXT_PROTOTYPES -DANDROID=1 -DUNIX=0
   ndk:
     platforms: [21]
     abis: [x86]
