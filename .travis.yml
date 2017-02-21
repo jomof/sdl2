@@ -8,7 +8,7 @@ matrix:
     - unzip SDL2-2.0.5.zip
     - pushd SDL2-2.0.5
     - cp ../cmakeify.yml .
-    - cp ../cmakeify
+    - cp ../cmakeify .
     - chmod +x cmakeify
     - ./cmakeify --group-id com.github.jomof --artifact-id sdl2 --target-version ${TRAVIS_TAG}
     - popd
