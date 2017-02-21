@@ -1,7 +1,9 @@
 targets: [android]
 includes: [include]
 android:
-  lib: libsdl.a
+  lib: libsdl2.a
+  flavors:
+    default: -DANDROID
   ndk:
     platforms: [21]
     abis: [x86]
