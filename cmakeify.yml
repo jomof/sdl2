@@ -4,3 +4,4 @@ android:
   lib: libsdl.a
   ndk:
     platforms: [21]
+    abis: [x86]
