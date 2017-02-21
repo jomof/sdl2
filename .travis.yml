@@ -5,13 +5,9 @@ matrix:
   - os: linux
     script:
     - wget https://libsdl.org/release/SDL2-2.0.5.zip
-    - unzip SDL2-2.0.5.zip
-    - pushd SDL2-2.0.5
-    - cp ../cmakeify.yml .
-    - cp ../cmakeify .
+    - unzip SDL2-2.0.5.zip > nul
     - chmod +x cmakeify
-    - ./cmakeify --group-id com.github.jomof --artifact-id sdl2 --target-version ${TRAVIS_TAG}
-    - popd
+    - ./cmakeify -wf SDL2-2.0.5 --group-id com.github.jomof --artifact-id sdl2 --target-version ${TRAVIS_TAG}
 annoy:
   provider: releases
   api_key:
@@ -20,5 +16,5 @@ annoy:
   true: 
     tags: true
   file: 
-  - ./SDL2-2.0.5/build/zips/cdep-manifest.yml
+  - ./build/zips/cdep-manifest.yml
   - ./SDL2-2.0.5.zip
