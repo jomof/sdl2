@@ -1,4 +1,3 @@
-
 language: c++
 matrix:
   include:
@@ -7,18 +6,20 @@ matrix:
     - wget https://libsdl.org/release/SDL2-2.0.5.zip
     - unzip SDL2-2.0.5.zip > nul
     - chmod +x cmakeify
-    - ./cmakeify --group-id com.github.jomof --artifact-id sdl2 --target-version ${TRAVIS_TAG}
-annoy:
+    - "./cmakeify --group-id com.github.jomof --artifact-id sdl2 --target-version
+      ${TRAVIS_TAG}"
+deploy:
   provider: releases
   api_key:
-    secure: W0NiAxk1KuJw/jxwyUlPZ2ri6GXCP0O0zfXpWxkvuIRFU0OiMjgv1Xp3mPmfqbjJMxlqaL/ExS+ZopUWYZGOmvP9alvHjbZXW7xX1VMFmPW8iCKbBZNBtx4+9GyPyCxN8h2B1xoSiUd7TstRA7CToZej8E1W77vCB33CAWowOKER2IPrVD5MKWmxlN37CABhsHyfUmNzxgl2NE1mrHrv4NE7BDVaDE3IZxrtNDAmgSZ2YjhO/hBWxTqo91FTAsPz/26fCpJsQJ4tQl/kp4U0SP0FdzAUdNKaABU2CJri/nMoOFFbqmwg71QFWFu4bma5rjRy9me5noygEuIXi9lo+1Jrsym4sBbYHm8Fti79Z/Gnv79WJDvAXtQA2olm7OcWM3nDTlh2GmfWUhAbWfinDT5VLIhJKcAvONF55FwT7Ab407J0IgQfUrmUzlgPw5HZ0x61ZqAkKcPmKbeMCZnYHzEY/uiMZvMHKqGS8qTYyr1tpC+OCl3Wb9HIzJjEOK2WP++MmwIy+Zu0ofAPsIqLzc0QpSko8LCjB0++oJgeZy7GD+Mv/wkVVfCnhJvqqio7LZrwMi94ZRassRKQw+gkbYlnenvTYGobcUR2r9fzxh0ObK6bh+wDqn70ydXPLeeiIKCEyqFCv+AaeLk+hz/as3kPCFodn1AdfoIOq7oe7RI=
+    secure: P9DLLB15NGasN429HNkDZT7nieZNGmQ2W3GaNmJSmI8YfD+F2lto3YyfLS4A/JH0rhvsa3lIiO+OwNou5HvfhWFufGIuqpP9Y1NFrZQD126ta5W9DJGw4GvA/iMP9i4/6WhDxH2LayBTyReW+bKbFw2SbdylS/jm+44aezNZ3Vy7boPvkLMGRl3S+RWtzvf97cR0fB2GyEj8M5MzI034LPENl8kGQY11OlXOIpyVrIaNFHUiRWZC+Y8mE0L6nTMRC4kTw7lPd3dRVkCLPAFhJMl7rRr5JSlo/rWF4Fa9Z+TBrbezP2ehmUV6yyD1cKNZ43PqSs+lSYOR10AdzR6RcddD8J4DXhFYlUZEuGFDHvXoiHsX0cPoRihbsoyLQL+FeId2Fo6v8Dn3gHTOSo3lGy8k8EMnZDP+LGvRmtILAndDWFmE3vARjB7yNK7IM2eRYZHdT+PfADoy5IsYVPT01o3nwDIiyuQGigcNV+XQJaNfl+99RSipc0/J0rQCBqAES4B1WPnfb0oIDg6P23X9e9rHO8JHbLX8W5hO+0CicRWxJEG5FvGebpmjyr3pUE+RI3yi6gMJ+1SIKkEDc9e75IXFFbNTe0tUj8Tx5Yue0EdqWZTqT7QYPI4j2yXmv0Wwt+ddhC/ZWCFx1ljoBsNbGlns8/6kWYLqtqOidMqxEhE=
   skip_cleanup: true
-  true: 
+  on:
     tags: true
-  file: 
+  file:
   - build/zips/cdep-manifest.yml
   - SDL2-2.0.5.zip
   - build/zips/sdl2-android-cxx_shared-platform-12.zip
   - build/zips/sdl2-android-cxx_shared-platform-21.zip
   - build/zips/sdl2-android-cxx_static-platform-12.zip
   - build/zips/sdl2-android-cxx_static-platform-21.zip
+
