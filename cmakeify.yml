@@ -1,9 +1,7 @@
 targets: [android]
 includes: [include]
 android:
-  lib: libsdl2.a
-  flavors:
-    default: -DCMAKE_C_FLAGS=-DGL_GLEXT_PROTOTYPES -DANDROID=TRUE
+  lib: libSDL2.so
   ndk:
     platforms: [21]
     abis: [x86]
