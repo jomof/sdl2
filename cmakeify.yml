@@ -3,5 +3,4 @@ includes: [SDL2-2.0.5/include]
 android:
   lib: libSDL2.so
   ndk:
-    platforms: [21]
-    abis: [x86]
+    platforms: [10, 21]
