@@ -6,9 +6,8 @@ matrix:
     script:
     - wget https://libsdl.org/release/SDL2-2.0.5.zip
     - unzip SDL2-2.0.5.zip > nul
-    - cp cmakeify.yml SDL2-2.0.5/cmakeify.yml
     - chmod +x cmakeify
-    - ./cmakeify -wf SDL2-2.0.5 --group-id com.github.jomof --artifact-id sdl2 --target-version ${TRAVIS_TAG}
+    - ./cmakeify --group-id com.github.jomof --artifact-id sdl2 --target-version ${TRAVIS_TAG}
 annoy:
   provider: releases
   api_key:
