@@ -1,5 +1,5 @@
 targets: [android]
-includes: [include]
+includes: [SDL2-2.0.5/include]
 android:
   lib: libSDL2.so
   ndk:
