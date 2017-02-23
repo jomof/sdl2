@@ -10,8 +10,7 @@ file(GLOB SDL_SOURCES
   ${CMAKEIFY_SOURCE_ROOT}/src/audio/*.c
   ${CMAKEIFY_SOURCE_ROOT}/src/audio/android/*.c
   ${CMAKEIFY_SOURCE_ROOT}/src/audio/dummy/*.c
-  ${CMAKEIFY_SOURCE_ROOT}/atomic/SDL_atomic.c
-  ${CMAKEIFY_SOURCE_ROOT}/atomic/SDL_spinlock.c
+  ${CMAKEIFY_SOURCE_ROOT}/src/atomic/*.c
   ${CMAKEIFY_SOURCE_ROOT}/src/core/android/*.c
   ${CMAKEIFY_SOURCE_ROOT}/src/cpuinfo/*.c
   ${CMAKEIFY_SOURCE_ROOT}/src/dynapi/*.c
