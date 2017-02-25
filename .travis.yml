@@ -18,8 +18,6 @@ deploy:
   file:
   - build/zips/cdep-manifest.yml
   - SDL2-2.0.5.zip
-  - build/zips/sdl2-android-cxx_shared-platform-12.zip
-  - build/zips/sdl2-android-cxx_shared-platform-21.zip
-  - build/zips/sdl2-android-cxx_static-platform-12.zip
-  - build/zips/sdl2-android-cxx_static-platform-21.zip
+  - build/zips/sdl2-android-platform-12.zip
+  - build/zips/sdl2-android-platform-21.zip
 
