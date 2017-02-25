@@ -35,7 +35,7 @@ file(GLOB SDL_SOURCES
   ${CMAKEIFY_SOURCE_ROOT}/src/video/android/*.c
   ${CMAKEIFY_SOURCE_ROOT}/src/test/*.c)
 
-add_library(SDL2 SHARED ${SDL_SOURCES})
+add_library(SDL2 static ${SDL_SOURCES})
 target_compile_options(SDL2 PRIVATE -DGL_GLEXT_PROTOTYPES)
 target_link_libraries(SDL2 PRIVATE dl GLESv1_CM GLESv2 log android)
 
