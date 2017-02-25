@@ -37,5 +37,5 @@ file(GLOB SDL_SOURCES
 
 add_library(SDL2 STATIC ${SDL_SOURCES})
 target_compile_options(SDL2 PRIVATE -DGL_GLEXT_PROTOTYPES)
-target_link_libraries(SDL2 PRIVATE dl GLESv1_CM GLESv2 log android)
+
 
