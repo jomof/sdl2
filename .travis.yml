@@ -18,8 +18,12 @@ deploy:
   on:
     tags: true
   file:
-  - build/zips/cdep-manifest.yml
   - SDL2-2.0.5.zip
-  - build/zips/sdl2-android-platform-12.zip
-  - build/zips/sdl2-android-platform-21.zip
+  - ./build/zips/cdep-manifest.yml
+  - build/zips/sdl2-android-stlport-platform-12.zip
+  - build/zips/sdl2-android-stlport-platform-21.zip
+  - build/zips/sdl2-android-gnustl-platform-12.zip
+  - build/zips/sdl2-android-gnustl-platform-21.zip
+  - build/zips/sdl2-android-cxx-platform-21.zip
+  - build/zips/sdl2-android-cxx-platform-12.zip
 
