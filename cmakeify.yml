@@ -21,7 +21,7 @@ example: |
         SDL_WINDOW_OPENGL                  // flags - see below
     );
     
-      // Check that the window was successfully created
+    // Check that the window was successfully created
     if (window == NULL) {
         // In the case that the window could not be made...
         return 1;
