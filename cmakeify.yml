@@ -4,7 +4,7 @@ android:
   lib: libSDL2.a
   ndk:
     runtimes: [c++, gnustl, stlport]
-    platforms: [12]
+    platforms: [12, 21]
 example: |
   #include <SDL.h>
   void test() {
