@@ -24,7 +24,7 @@ example: |
     // Check that the window was successfully created
     if (window == NULL) {
         // In the case that the window could not be made...
-        return 1;
+        return;
     }
 
     // The window is open: could enter program loop here (see SDL_PollEvent())
