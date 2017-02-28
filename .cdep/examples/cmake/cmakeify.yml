@@ -1,6 +1,7 @@
 targets: [android]
-includes: [SDL2-2.0.5/include]
 android:
-  lib: libSDL2.a
   ndk:
+    versions: [r13b, r14-beta1]
+    runtimes: [c++, gnustl, stlport]
     platforms: [12, 21]
+
