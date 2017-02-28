@@ -3,6 +3,7 @@ includes: [SDL2-2.0.5/include]
 android:
   lib: libSDL2.a
   ndk:
+    runtimes: [c++, gnustl]
     platforms: [12, 21]
 example: |
   #include <SDL.h>
