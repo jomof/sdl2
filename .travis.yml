@@ -9,6 +9,7 @@ matrix:
     - "./cmakeify --group-id com.github.jomof --artifact-id sdl2 --target-version ${TRAVIS_TAG:-0.0.0}"
     - chmod +x cdep
     - ./cdep
+    - cat /home/travis/build/jomof/sdl2/./.cdep/modules/cdep-dependencies-config.cmake
     - ./cmakeify -wf .cdep/examples/cmake
 deploy:
   provider: releases
