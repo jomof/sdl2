@@ -7,6 +7,7 @@ matrix:
     - unzip SDL2-2.0.5.zip > nul
     - chmod +x cmakeify
     - "./cmakeify --group-id com.github.jomof --artifact-id sdl2 --target-version ${TRAVIS_TAG:-0.0.0}"
+    - cat ./build/zips/cdep-manifest.yml
     - chmod +x cdep
     - ./cdep
     - cat /home/travis/build/jomof/sdl2/./.cdep/modules/cdep-dependencies-config.cmake
