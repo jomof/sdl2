@@ -1,7 +1,7 @@
 language: c++
 matrix:
   include:
-  - os: linux
+  - os: osx
     script:
     - wget https://libsdl.org/release/SDL2-2.0.5.zip
     - unzip SDL2-2.0.5.zip > nul
@@ -12,20 +12,4 @@ matrix:
     - ./cdep
     - cat /home/travis/build/jomof/sdl2/./.cdep/modules/cdep-dependencies-config.cmake
     - ./cmakeify -wf .cdep/examples/cmake
-deploy:
-  provider: releases
-  api_key:
-    secure: P9DLLB15NGasN429HNkDZT7nieZNGmQ2W3GaNmJSmI8YfD+F2lto3YyfLS4A/JH0rhvsa3lIiO+OwNou5HvfhWFufGIuqpP9Y1NFrZQD126ta5W9DJGw4GvA/iMP9i4/6WhDxH2LayBTyReW+bKbFw2SbdylS/jm+44aezNZ3Vy7boPvkLMGRl3S+RWtzvf97cR0fB2GyEj8M5MzI034LPENl8kGQY11OlXOIpyVrIaNFHUiRWZC+Y8mE0L6nTMRC4kTw7lPd3dRVkCLPAFhJMl7rRr5JSlo/rWF4Fa9Z+TBrbezP2ehmUV6yyD1cKNZ43PqSs+lSYOR10AdzR6RcddD8J4DXhFYlUZEuGFDHvXoiHsX0cPoRihbsoyLQL+FeId2Fo6v8Dn3gHTOSo3lGy8k8EMnZDP+LGvRmtILAndDWFmE3vARjB7yNK7IM2eRYZHdT+PfADoy5IsYVPT01o3nwDIiyuQGigcNV+XQJaNfl+99RSipc0/J0rQCBqAES4B1WPnfb0oIDg6P23X9e9rHO8JHbLX8W5hO+0CicRWxJEG5FvGebpmjyr3pUE+RI3yi6gMJ+1SIKkEDc9e75IXFFbNTe0tUj8Tx5Yue0EdqWZTqT7QYPI4j2yXmv0Wwt+ddhC/ZWCFx1ljoBsNbGlns8/6kWYLqtqOidMqxEhE=
-  skip_cleanup: true
-  on:
-    tags: true
-  file:
-  - SDL2-2.0.5.zip
-  - ./build/zips/cdep-manifest.yml
-  - build/zips/sdl2-android-stlport-platform-12.zip
-  - build/zips/sdl2-android-stlport-platform-21.zip
-  - build/zips/sdl2-android-gnustl-platform-12.zip
-  - build/zips/sdl2-android-gnustl-platform-21.zip
-  - build/zips/sdl2-android-cxx-platform-21.zip
-  - build/zips/sdl2-android-cxx-platform-12.zip
 
