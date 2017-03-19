@@ -1,4 +1,4 @@
-targets: [android]
+targets: [android, iOS]
 android:
   lib: libSDL2.a
   ndk:
