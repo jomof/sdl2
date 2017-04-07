@@ -1,6 +1,6 @@
 targets: [android]
 buildTarget: SDL2
-includes: include
+includes: [include]
 android:
   ndk:
     runtimes: [c++, gnustl, stlport]
