@@ -1,4 +1,5 @@
 targets: [android, iOS]
+includes: [include]
 badges: no
 android:
   ndk:
