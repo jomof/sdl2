@@ -3,7 +3,7 @@ matrix:
   include:
   - os: linux
     script:
-    - wget https://libsdl.org/release/SDL2-2.0.5.zip
+    # - wget https://libsdl.org/release/SDL2-2.0.5.zip
     - unzip SDL2-2.0.5.zip > nul
     - chmod +x cmakeify
     - "./cmakeify --group-id com.github.jomof --artifact-id sdl2 --target-version ${TRAVIS_TAG:-0.0.0}"
