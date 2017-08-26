@@ -3,6 +3,7 @@ set( CMAKE_VERBOSE_MAKEFILE on )
 project(SDL2)
 
 set(CMAKEIFY_SOURCE_ROOT "SDL2-2.0.5")
+option(CMAKEIFY_REDIST_INCLUDE_DIRECTORY "CMakeify redist directory" "redist")
 include_directories(${CMAKEIFY_SOURCE_ROOT}/include)
 
 file(GLOB SDL_SOURCES 
