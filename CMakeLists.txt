@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.7)
+cmake_minimum_required(VERSION 3.6)
 set( CMAKE_VERBOSE_MAKEFILE on )
 project(SDL2)
 
